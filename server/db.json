@@ -1,0 +1,40 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "name": "I Want Out",
+            "singer": "Helloween",
+            "album": "Keeper of the Seven Keys: Part II"
+        },
+        {
+            "id": 2,
+            "name": "Stairway to Heaven",
+            "singer": "Led Zeppelin",
+            "album": "Led Zeppelin IV"
+        },
+        {
+            "id": 3,
+            "name": "Sweet Child O' Mine",
+            "singer": "Guns N' Roses",
+            "album": "Appetite for Destruction"
+        },
+        {
+            "id": 4,
+            "name": "Rock You Like a Hurricane",
+            "singer": "Scorpions",
+            "album": "Love at First Sting"
+        },
+        {
+            "id": 5,
+            "name": "The Trooper",
+            "singer": "Iron Maiden",
+            "album": "Piece of Mind"
+        },
+        {
+            "id": 6,
+            "name": "Fear of the Dark",
+            "singer": "Iron Maiden",
+            "album": "Fear of the Dark"
+        }
+    ]
+}
