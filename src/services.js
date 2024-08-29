@@ -21,7 +21,6 @@ if (response.ok) {
     printSongs()
 }
 
-
 //READ - METHOD: GET
 async function getAllSongs() {
   const response = await fetch('URL_API', {
@@ -48,11 +47,9 @@ async function printSongs() {
     <button onclick="deleteSong(${song.id})">Delete</button>
     <button onclick="updateSong(${song.id})">Edit</button>
     </li>`
-
   })
-  
 }
-printSongs()
+    printSongs()
 
 //UPDATE - METHOD: PUT
 async function updateSong(id){
@@ -93,7 +90,6 @@ async function updateSong(id){
         };
     }
 }
-
 }
 
 //DELETE - METHOD: DELETE
