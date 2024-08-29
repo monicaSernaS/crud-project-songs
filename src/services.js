@@ -3,7 +3,7 @@ const URL_API = 'http://localhost:3000/songs'
 
 async function createSong(){
     const response = await fetch('URL_API', {
-        method: 'GET',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -12,9 +12,11 @@ async function createSong(){
             singer: 'singerName',
             album: 'albumName'
         })
-      });
-
+    })       
+if (response.ok) {
+    printSongs()
 }
+
 
 //READ - METHOD: GET
 async function getAllSongs() {
@@ -66,4 +68,5 @@ async function deleteSong(id){
         printSongs()
       }
         return deletedSong
+    }
     }
