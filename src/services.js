@@ -2,17 +2,20 @@
 const URL_API = 'http://localhost:3000/songs'
 
 async function createSong(){
+    const form = document.getElementById('addSong')
+    const newSong = {
+        name: form.name.value,
+        singer: form.singer.value,
+        album: form.album.value
+    }
     const response = await fetch('URL_API', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            name: 'songName',
-            singer: 'singerName',
-            album: 'albumName'
+        body: JSON.stringify(newSong)
         })
-    })       
+    }     
 if (response.ok) {
     printSongs()
 }
@@ -68,5 +71,4 @@ async function deleteSong(id){
         printSongs()
       }
         return deletedSong
-    }
-    }
+}

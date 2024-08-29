@@ -8,29 +8,22 @@
 </head>
 <body>
     <header>
-        <h1>Listado de Canciones</h1>
+        <h1>Lista de Canciones</h1>
     </header>
-    
-     <main>
-    <!--    <section>
-            <h2>Agregar o Editar Canción</h2>
-            <form id="songForm">
+    <main>
+       <section id="songsSection">
+            <form id="addSong">
                 <input type="text" id="songName" placeholder="Nombre de la canción" required>
                 <input type="text" id="singer" placeholder="Nombre del artista" required>
                 <input type="text" id="album" placeholder="Nombre del álbum" required>
-                <button type="submit">Guardar</button>
+                <button onclick="createSong()">Agregar Canción</button>
             </form>
-        </section>
--->
-        <section id="songsSection">
-           <ul id="songsList"></ul>
+            <ul id="songsList"></ul>
         </section>
     </main>
     <script src="./src/services.js"></script>
     <footer>
-        <p> &copy; 2024 |CRUD Project List of Songs| Bootcamp ODC / FACTORIA F5</p>
+        <p> &copy; 2024 | CRUD Project List of Songs | Bootcamp ODC / FACTORIA F5</p>
     </footer>
-    
-    
 </body>
 </html>
