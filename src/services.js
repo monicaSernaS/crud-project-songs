@@ -32,14 +32,21 @@ async function printSongs() {
 }
 printSongs()
 
-
-
-
 //UPDATE - METHOD: PUT
 async function updateSong(){
 
 }
-//DELETE - METHOD: DELETE
-async function deleteSong(){
 
-}
+//DELETE - METHOD: DELETE
+
+async function deleteSong(id){
+    const response = await fetch('URL_API' + `/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const deletedSong = await response.json();
+        return deletedSong
+    }
+
