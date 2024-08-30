@@ -1,5 +1,5 @@
 ///CREATE - METHOD: POST
-const URL_API = 'http://localhost:3000/songs'
+const URL_API = 'http://localhost:3001/songs'
 
 async function createSong(){
     const form = document.getElementById('addSong')
@@ -9,21 +9,23 @@ async function createSong(){
         singer: form.singer.value,
         album: form.album.value
     }
-    const response = await fetch('URL_API', {
+    const response = await fetch(URL_API, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(newSong)
         })
+        if (response.ok) {
+          printSongs()
     }     
-if (response.ok) {
-    printSongs()
+
 }
+    
 
 //READ - METHOD: GET
 async function getAllSongs() {
-  const response = await fetch('URL_API', {
+  const response = await fetch(URL_API, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -33,19 +35,19 @@ async function getAllSongs() {
     return data;
 }
 
-const listTag= document.getElementById('songList')
+const listTag= document.getElementById('songsList')
 
 async function printSongs() {
   const songs = await getAllSongs();
-  listTag.innerHTML = ''
-  song.map((song) => {
+  listTag.innerHTML = '';
+  songs.map((song) => {
     listTag.innerHTML += `<li>
     <p>${song.id}</p>
     <p>${song.name}</p>
     <p>${song.singer}</p>
     <p>${song.album}</p>
     <button onclick="deleteSong(${song.id})">Delete</button>
-    <button onclick="updateSong(${song.id})">Edit</button>
+    <button onclick="loadSongForEdit(${song.id})">Edit</button>
     </li>`
   })
 }
@@ -59,7 +61,7 @@ async function updateSong(id){
         singer: form.singer.value,
         album: form.album.value
     }
-    const response = await fetch('URL_API' + `/${id}`, {
+    const response = await fetch(URL_API + `/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +97,7 @@ async function updateSong(id){
 //DELETE - METHOD: DELETE
 
 async function deleteSong(id){
-    const response = await fetch('URL_API' + `/${id}`, {
+    const response = await fetch(URL_API + `/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
