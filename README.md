@@ -11,7 +11,7 @@ This project was crafted with:
 - HTML: Structuring the web pages like a pro. 🏗️
 - CSS: Adding some style and making it look cool. 🎨
 - JavaScript: Bringing it all to life with logic and functionality. 💻
-- 
+  
 #### 📝 Requirements
 Before you dive in, make sure you have:
 
