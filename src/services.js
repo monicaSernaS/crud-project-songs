@@ -7,9 +7,9 @@ async function createSong(){
     const newSong = {
         name: form.name.value,
         singer: form.singer.value,
-        album: form.album.value
+        album: form.album.value,
     }
-    const response = await fetch(URL_API, {
+        const response = await fetch(URL_API, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -17,11 +17,10 @@ async function createSong(){
         body: JSON.stringify(newSong)
         })
         if (response.ok) {
+          form.reset();
           printSongs()
     }     
-
-}
-    
+  }
 
 //READ - METHOD: GET
 async function getAllSongs() {
@@ -59,7 +58,7 @@ async function updateSong(id){
     const updatedSong = {
         name: form.name.value,
         singer: form.singer.value,
-        album: form.album.value
+        album: form.album.value,
     }
     const response = await fetch(URL_API + `/${id}`, {
         method: 'PUT',
@@ -69,8 +68,8 @@ async function updateSong(id){
         body: JSON.stringify(updatedSong)
         })
     if (response.ok) {
-        printSongs()
-        form.reset()
+        form.reset();
+        printSongs() 
     }
     return updatedSong
 
@@ -79,7 +78,7 @@ async function updateSong(id){
     const songs = await getAllSongs();
     const song = songs.find((song) => song.id === id);
 
-    if (song) {
+      if (song) {
         const form = document.getElementById('updateSong');
         form.name.value = song.name;
         form.singer.value = song.singer;
@@ -90,9 +89,8 @@ async function updateSong(id){
             event.preventDefault();  // Prevent form from submitting normally
             updateSong(id);  // Call the update function with the song ID
         };
+      }
     }
-}
-}
 
 //DELETE - METHOD: DELETE
 
@@ -103,9 +101,10 @@ async function deleteSong(id){
           'Content-Type': 'application/json',
         },
       });
-      const deletedSong = await response.json()
+      /*const deletedSong = await response.json()*/
       if (response.ok) {
         printSongs()
       }
-        return deletedSong
+        return deletedSong 
+}
 }

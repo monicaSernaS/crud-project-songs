@@ -5,7 +5,7 @@
       "name": "I Want Out",
       "singer": "Helloween",
       "album": "Keeper of the Seven Keys: Part II"
-  },
+    },
     {
       "id": "2",
       "name": "Stairway to Heaven",
@@ -37,29 +37,38 @@
       "album": "Fear of the Dark"
     },
     {
-      "id": "7b80",
-      "singer": "uyuoui",
-      "album": "yiruiuyiyu"
+      "id": "7",
+      "name": "Breaking the Law",
+      "singer": "Judas Priest",
+      "album": "British Steel"
     },
     {
-      "id": "d5f0",
-      "singer": "hjhjh",
-      "album": "gjhkhjk"
+      "id": "8",
+      "name": "Painkiller",
+      "singer": "Judas Priest",
+      "album": "Painkiller"
     },
     {
-      "id": "cafb",
-      "singer": "hjkhjk",
-      "album": "hkhjkj"
+      "id": "9",
+      "name": "Holy Diver",
+      "singer": "Dio",
+      "album": "Holy Diver"
     },
     {
-      "id": "1c3b",
-      "singer": "dhfghfg",
-      "album": "dhghgfhf"
+      "id": "10",
+      "name": "Rainbow in the Dark",
+      "singer": "Dio",
+      "album": "Holy Diver"
     },
     {
-      "id": "900f",
-      "singer": "Helloween",
-      "album": "Keeper of the Seven Keys: Part II"
+      "id": "d3c3",
+      "singer": "d´lgkdf´ñlfkg",
+      "album": "fdlgj´dflgkj´fkld"
+    },
+    {
+      "id": "95cf",
+      "singer": "vkjsdkfhdsk",
+      "album": "sfnksajdhsakñd"
     }
   ]
 }
